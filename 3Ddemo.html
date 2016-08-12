@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟立方体</title>
+    <style>
+        .cube{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin:100px auto 0;
+            transform-style: preserve-3d;
+            transition: all 3s;
+        }
+        
+        .cube:hover{
+            transform: rotateY(360deg) rotateX(360deg);
+        }
+        .cube div{
+            color: #fff;
+            width: 200px;
+            height: 200px;
+            text-align:center;
+            position: absolute;
+            font:bold 80px/200px '黑体';
+        }
+        
+        /*利用C3选择器来设置每一个“面”的样式*/
+        .cube div:nth-child(1){
+            background: pink;
+            opacity: 0.5;
+            transform: rotateX(0deg) translateZ(100px);
+        }
+        .cube div:nth-child(2){
+            background: green;
+            opacity: 0.5;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .cube div:nth-child(3){
+            background: lightblue;
+            opacity: 0.5;
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        .cube div:nth-child(4){
+            background: lightseagreen;
+            opacity: 0.5;
+            transform: rotateX(270deg) translateZ(100px);
+        }
+        .cube div:nth-child(5){
+            background: greenyellow;
+            opacity: 0.5;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .cube div:nth-child(6){
+            background: lightcoral;
+            opacity: 0.5;
+            transform: rotateY(270deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
